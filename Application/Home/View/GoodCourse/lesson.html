@@ -1,0 +1,117 @@
+<extend name="Public:frameset"/>
+<block name="style">
+    <link rel="stylesheet" href="__PUBLIC__/assets/pages/styles/course.css" type="text/css"/>
+</block>
+<block name="page-body">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="side-nav c-side">
+      <ul>
+                        <a href="{:U('GoodCourse/course')}">
+                            <li>
+                                <i class=" glyphicon glyphicon-list-alt"></i> <span class="nav-text"></span>&nbsp;&nbsp;精品课程
+                            </li>
+                        </a>
+                        <a href="{:U('GoodCourse/teachers',array('course_id'=>$one_course['id']))}">
+                            <li>
+                            <i class=" glyphicon glyphicon-list-alt"></i> <span class="nav-text"></span>&nbsp;&nbsp;课程团队
+                            </li>
+                        </a>
+                        <span class="after"></span>
+                        <a href="{:U('GoodCourse/lesson',array('course_id'=>$one_course['id']))}">
+                            <li class="active">
+                            <i class=" glyphicon glyphicon-list-alt"></i> <span class="nav-text"></span>&nbsp;&nbsp;课程介绍
+                            </li>
+                        </a>
+ 
+                        <span class="after"></span>
+                        <a href="{:U('GoodCourse/syllabus',array('course_id'=>$one_course['id']))}">
+                            <li>
+                            <i class=" glyphicon glyphicon-list-alt"></i> <span class="nav-text"></span>&nbsp;&nbsp;教学大纲
+                            </li>
+                        </a>  
+                         <span class="after"></span>
+                        <a href="{:U('GoodCourse/calendar',array('course_id'=>$one_course['id']))}">
+                            <li>
+                            <i class=" glyphicon glyphicon-list-alt"></i> <span class="nav-text"></span>&nbsp;&nbsp;教学日历
+                            </li>
+                        </a>  
+                        <span class="after"></span>
+                        <a href="{:U('GoodCourse/video_watch',array('course_id'=>$one_course['id']))}">
+                            <li>
+                            <i class=" glyphicon glyphicon-list-alt"></i> <span class="nav-text"></span>&nbsp;&nbsp;教学视频
+                            </li>
+                        </a>                 
+                        <span class="after"></span>
+                        <a href="{:U('GoodCourse/courseware',array('course_id'=>$one_course['id']))}">
+                            <li>
+                            <i class=" glyphicon glyphicon-list-alt"></i> <span class="nav-text"></span>&nbsp;&nbsp;教学课件
+                            </li>
+                        </a>                          
+                        <span class="after"></span>
+                        <a href="{:U('GoodCourse/homeWork',array('course_id'=>$one_course['id']))}">
+                            <li>
+                            <i class=" glyphicon glyphicon-list-alt"></i> <span class="nav-text"></span>&nbsp;&nbsp;作业习题
+                            </li>
+                        </a>  
+                         <span class="after"></span>
+                        <a href="{:U('GoodCourse/audio',array('course_id'=>$one_course['id']))}">
+                            <li>
+                            <i class=" glyphicon glyphicon-list-alt"></i> <span class="nav-text"></span>&nbsp;&nbsp;音频素材
+                            </li>
+                        </a>     
+                          <span class="after"></span>
+                        <a href="{:U('GoodCourse/vedio',array('course_id'=>$one_course['id']))}">
+                            <li>
+                            <i class=" glyphicon glyphicon-list-alt"></i> <span class="nav-text"></span>&nbsp;&nbsp;视频素材
+                            </li>
+                        </a>    
+                          <span class="after"></span>
+                        <a href="{:U('GoodCourse/resources',array('course_id'=>$one_course['id']))}">
+                            <li>
+                            <i class=" glyphicon glyphicon-list-alt"></i> <span class="nav-text"></span>&nbsp;&nbsp;参考资料目录
+                            </li>
+                        </a>  
+                         <span class="after"></span>
+                        <a href="{:U('GoodCourse/contact',array('course_id'=>$one_course['id']))}">
+                            <li>
+                            <i class=" glyphicon glyphicon-list-alt"></i> <span class="nav-text"></span>&nbsp;&nbsp;辅助教学材料
+                            </li>
+                        </a>                                                                                  
+                        <span class="after"></span>
+                        <a href="{:U('Question/askQuestion',array('course_id'=>$one_course['id']))}">
+                            <li>
+                            <i class=" glyphicon glyphicon-list-alt"></i> <span class="nav-text"></span>&nbsp;&nbsp;课程讨论
+                            </li>
+                        </a>
+                        <span class="after"></span>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="headline top14">
+                    <div class="col-md-12">
+                        <div class="pull-right">
+                            <span class="triangle-lg glyphicon glyphicon-triangle-left"></span>
+                            <h3>{$one_course['name']}</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-xs-12">
+                        <ol class="my-breadcrumb">
+                            <li><a href="{:U('Index/index')}">首页</a></li>
+                            <li>精品课程</li>
+                            <li title="{$one_course['name']}">{$one_course['name']|mb_substr=###,0,6,'utf-8'}</li>
+                            <li>课程介绍</li>
+                        </ol>
+                    </div>    
+                   
+                    <h2 class="text-center">课程介绍</h2><br/>
+                    <div class="pull-right">创建时间: <span>{$one_course['create_time']}</span> &nbsp;&nbsp;阅读：<span>{$one_course['hit']}</span>次 </div>
+                    <br/>
+                    <article>{$one_course['intro']}</article>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>

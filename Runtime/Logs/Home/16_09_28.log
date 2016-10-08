@@ -1,0 +1,989 @@
+[ 2016-09-28T09:50:40+08:00 ] ::1 /SIS.JXNU-B/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.054003s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.040003s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.041003s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0110s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = 2 ORDER BY rank desc  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0020s ]
+SQL: SELECT `savepath`,`savename`,fl.url,fl.name FROM edu_friend_link fl INNER JOIN edu_frame_file as f ON fl.img=f.id  WHERE fl.status = 1 AND fl.type = 1 ORDER BY fl.create_time desc LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `edu_banner` [ RunTime:0.0070s ]
+SQL: SELECT b.id,b.index_show,f.savepath,f.savename FROM edu_banner b INNER JOIN edu_frame_file AS f ON b.img_title = f.id  WHERE `status` = 1 AND `index_show` <> 0 ORDER BY b.create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_category` WHERE `status` = 1 AND `switch` = 1 AND `nav_show` = 1 AND `language_id` = 2 ORDER BY rank desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0290s ]
+SQL: SELECT d.id,d.content FROM edu_details d INNER JOIN edu_category AS c ON d.category_id = c.id  WHERE d.status = 1 AND c.language_id = 2 AND d.is_publish = 1 ORDER BY d.create_time desc  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '领导致辞' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 59 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '师生风采' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 18 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '教学动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 60 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '新闻动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 23 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '学生组织' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 28 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '科研动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 58 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.426024s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.428024s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.029002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.030002s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.001000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.039002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.040003s ]
+
+[ 2016-09-28T15:49:34+08:00 ] 127.0.0.1 /SIS.JXNU-B/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.020001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.052003s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.052003s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0930s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0250s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0560s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = 2 ORDER BY rank desc  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0490s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0020s ]
+SQL: SELECT `savepath`,`savename`,fl.url,fl.name FROM edu_friend_link fl INNER JOIN edu_frame_file as f ON fl.img=f.id  WHERE fl.status = 1 AND fl.type = 1 ORDER BY fl.create_time desc LIMIT 1   [ RunTime:0.1110s ]
+SQL: SHOW COLUMNS FROM `edu_banner` [ RunTime:0.0570s ]
+SQL: SELECT b.id,b.index_show,f.savepath,f.savename FROM edu_banner b INNER JOIN edu_frame_file AS f ON b.img_title = f.id  WHERE `status` = 1 AND `index_show` <> 0 ORDER BY b.create_time desc LIMIT 5   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `edu_category` WHERE `status` = 1 AND `switch` = 1 AND `nav_show` = 1 AND `language_id` = 2 ORDER BY rank desc LIMIT 5   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0490s ]
+SQL: SELECT d.id,d.content FROM edu_details d INNER JOIN edu_category AS c ON d.category_id = c.id  WHERE d.status = 1 AND c.language_id = 2 AND d.is_publish = 1 ORDER BY d.create_time desc  [ RunTime:0.1760s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0100s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '领导致辞' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 59 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '师生风采' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 18 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '教学动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 60 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '新闻动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 23 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '学生组织' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 28 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '科研动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 58 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.620036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.621036s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.044003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.048003s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.003001s ]
+INFO: [ action_end ] --END-- [ RunTime:0.005001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.036002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.037002s ]
+
+[ 2016-09-28T20:58:24+08:00 ] 127.0.0.1 /SIS.JXNU-B/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.005001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0690s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0440s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = 2 ORDER BY rank desc  [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0010s ]
+SQL: SELECT `savepath`,`savename`,fl.url,fl.name FROM edu_friend_link fl INNER JOIN edu_frame_file as f ON fl.img=f.id  WHERE fl.status = 1 AND fl.type = 1 ORDER BY fl.create_time desc LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `edu_banner` [ RunTime:0.0360s ]
+SQL: SELECT b.id,b.index_show,f.savepath,f.savename FROM edu_banner b INNER JOIN edu_frame_file AS f ON b.img_title = f.id  WHERE `status` = 1 AND `index_show` <> 0 ORDER BY b.create_time desc LIMIT 5   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `edu_category` WHERE `status` = 1 AND `switch` = 1 AND `nav_show` = 1 AND `language_id` = 2 ORDER BY rank desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0070s ]
+SQL: SELECT d.id,d.content FROM edu_details d INNER JOIN edu_category AS c ON d.category_id = c.id  WHERE d.status = 1 AND c.language_id = 2 AND d.is_publish = 1 ORDER BY d.create_time desc  [ RunTime:0.0550s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '领导致辞' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 59 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '师生风采' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 18 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '教学动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 60 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '新闻动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 23 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '学生组织' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 28 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '科研动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 58 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.444025s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.445025s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.031002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.032002s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.000000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-09-28T23:03:48+08:00 ] ::1 /SIS.JXNU-B/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.006001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.2460s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.2300s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.1810s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = 2 ORDER BY rank desc  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.2900s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0010s ]
+SQL: SELECT `savepath`,`savename`,fl.url,fl.name FROM edu_friend_link fl INNER JOIN edu_frame_file as f ON fl.img=f.id  WHERE fl.status = 1 AND fl.type = 1 ORDER BY fl.create_time desc LIMIT 1   [ RunTime:0.1920s ]
+SQL: SHOW COLUMNS FROM `edu_banner` [ RunTime:0.3700s ]
+SQL: SELECT b.id,b.index_show,f.savepath,f.savename FROM edu_banner b INNER JOIN edu_frame_file AS f ON b.img_title = f.id  WHERE `status` = 1 AND `index_show` <> 0 ORDER BY b.create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_category` WHERE `status` = 1 AND `switch` = 1 AND `nav_show` = 1 AND `language_id` = 2 ORDER BY rank desc LIMIT 5   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.8780s ]
+SQL: SELECT d.id,d.content FROM edu_details d INNER JOIN edu_category AS c ON d.category_id = c.id  WHERE d.status = 1 AND c.language_id = 2 AND d.is_publish = 1 ORDER BY d.create_time desc  [ RunTime:0.3300s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0040s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '领导致辞' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 59 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0040s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '师生风采' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 18 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '教学动态' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 60 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '新闻动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 23 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '学生组织' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 28 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '科研动态' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 58 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.855049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.855049s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.042003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.042003s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.001000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.069004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.069004s ]
+
+[ 2016-09-28T23:05:42+08:00 ] 127.0.0.1 /SIS.JXNU-B/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0010s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = 2 ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0020s ]
+SQL: SELECT `savepath`,`savename`,fl.url,fl.name FROM edu_friend_link fl INNER JOIN edu_frame_file as f ON fl.img=f.id  WHERE fl.status = 1 AND fl.type = 1 ORDER BY fl.create_time desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_banner` [ RunTime:0.0010s ]
+SQL: SELECT b.id,b.index_show,f.savepath,f.savename FROM edu_banner b INNER JOIN edu_frame_file AS f ON b.img_title = f.id  WHERE `status` = 1 AND `index_show` <> 0 ORDER BY b.create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_category` WHERE `status` = 1 AND `switch` = 1 AND `nav_show` = 1 AND `language_id` = 2 ORDER BY rank desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0020s ]
+SQL: SELECT d.id,d.content FROM edu_details d INNER JOIN edu_category AS c ON d.category_id = c.id  WHERE d.status = 1 AND c.language_id = 2 AND d.is_publish = 1 ORDER BY d.create_time desc  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '领导致辞' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 59 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '师生风采' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 18 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '教学动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 60 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0030s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '新闻动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 23 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '学生组织' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 28 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '科研动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 58 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.237013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.237013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.000000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-09-28T23:32:48+08:00 ] 127.0.0.1 /SIS.JXNU-B/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.007000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0020s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = 2 ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0010s ]
+SQL: SELECT `savepath`,`savename`,fl.url,fl.name FROM edu_friend_link fl INNER JOIN edu_frame_file as f ON fl.img=f.id  WHERE fl.status = 1 AND fl.type = 1 ORDER BY fl.create_time desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_banner` [ RunTime:0.0080s ]
+SQL: SELECT b.id,b.index_show,f.savepath,f.savename FROM edu_banner b INNER JOIN edu_frame_file AS f ON b.img_title = f.id  WHERE `status` = 1 AND `index_show` <> 0 ORDER BY b.create_time desc LIMIT 5   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `edu_category` WHERE `status` = 1 AND `switch` = 1 AND `nav_show` = 1 AND `language_id` = 2 ORDER BY rank desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0020s ]
+SQL: SELECT d.id,d.content FROM edu_details d INNER JOIN edu_category AS c ON d.category_id = c.id  WHERE d.status = 1 AND c.language_id = 2 AND d.is_publish = 1 ORDER BY d.create_time desc  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0030s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '领导致辞' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 59 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '师生风采' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 18 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '教学动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 60 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '新闻动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 23 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '学生组织' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 28 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '科研动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 58 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.227013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.227013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.000000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-09-28T23:32:53+08:00 ] 127.0.0.1 /SIS.JXNU-B/index.php/Home/Article/detail/content_id/730/lan_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0010s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = '2' ORDER BY rank desc  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0070s ]
+SQL: UPDATE `edu_details` SET `hit`=hit+1 WHERE `id` = 730 [ RunTime:0.5200s ]
+SQL: SELECT d.id,d.hit,d.user_id,d.title,d.content,d.create_time,d.update_time,c.pid as c_pid,c.name as category_name,u.name AS user_name FROM edu_details d INNER JOIN edu_category AS c ON d.category_id=c.id LEFT JOIN edu_user AS u ON d.user_id=u.id  WHERE d.status = 1 AND d.is_publish = 1 AND d.id = '730' AND d.language_id = '2'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `status` = 1 AND `switch` = 1 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `pid` = 5 AND `status` = 1 AND `switch` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.166009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.167009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.001000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-09-28T23:32:54+08:00 ] 127.0.0.1 /SIS.JXNU-B/index.php/Home/Article/ajax_get_category_id?content_id=730
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0070s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = 2 ORDER BY rank desc  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0090s ]
+SQL: SELECT `category_id` FROM `edu_details` WHERE `id` = 730 AND `status` = 1 AND `is_publish` = 1 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-28T23:32:57+08:00 ] 127.0.0.1 /SIS.JXNU-B/index.php/Home/Article/category/category_id/24/lan_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0060s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = '2' ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0020s ]
+SQL: SELECT `name` FROM `edu_category` WHERE `id` = 24 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p F:\PHP\wamp64\www\SIS.JXNU-B\Application\Home\Model\DetailsModel.class.php 第 14 行.
+SQL: SELECT d.id,d.title,d.create_time,c.name as category_name,d.category_id,c.pid as c_pid,d.language_id FROM edu_details d INNER JOIN edu_category AS c ON d.category_id = c.id  WHERE d.status = 1 AND d.is_publish = 1 AND d.category_id = '24' ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0020s ]
+SQL: SELECT `pid` FROM `edu_category` WHERE `id` = 24 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `pid` = 5 AND `switch` = 1  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_details` WHERE `status` = 1 AND `is_publish` = 1 AND `category_id` = 24 LIMIT 1   [ RunTime:0.0940s ]
+SQL: SELECT `pid` FROM `edu_category` WHERE `id` = 24 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `edu_category` WHERE `id` = 5 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.147008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.148008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.000000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2016-09-28T23:32:59+08:00 ] 127.0.0.1 /SIS.JXNU-B/index.php/Home/Article/category/category_id/25/lan_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0050s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = '2' ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `edu_category` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: p F:\PHP\wamp64\www\SIS.JXNU-B\Application\Home\Model\DetailsModel.class.php 第 14 行.
+SQL: SELECT d.id,d.title,d.create_time,c.name as category_name,d.category_id,c.pid as c_pid,d.language_id FROM edu_details d INNER JOIN edu_category AS c ON d.category_id = c.id  WHERE d.status = 1 AND d.is_publish = 1 AND d.category_id = '25' ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `edu_category` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `pid` = 5 AND `switch` = 1  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_details` WHERE `status` = 1 AND `is_publish` = 1 AND `category_id` = 25 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `edu_category` WHERE `id` = 25 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `edu_category` WHERE `id` = 5 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.112007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.113007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.001000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-09-28T23:33:02+08:00 ] 127.0.0.1 /SIS.JXNU-B/index.php/Home/Article/category/category_id/21/lan_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0070s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = '2' ORDER BY rank desc  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `edu_category` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: p F:\PHP\wamp64\www\SIS.JXNU-B\Application\Home\Model\DetailsModel.class.php 第 14 行.
+SQL: SELECT d.id,d.title,d.create_time,c.name as category_name,d.category_id,c.pid as c_pid,d.language_id FROM edu_details d INNER JOIN edu_category AS c ON d.category_id = c.id  WHERE d.status = 1 AND d.is_publish = 1 AND d.category_id = '21' ORDER BY create_time desc LIMIT 0,10   [ RunTime:0.0020s ]
+SQL: SELECT `pid` FROM `edu_category` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `pid` = 4 AND `switch` = 1  [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_details` WHERE `status` = 1 AND `is_publish` = 1 AND `category_id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `edu_category` WHERE `id` = 21 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `edu_category` WHERE `id` = 4 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\1eed4d3931178952bdedc16b19396bb6.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.124007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.125007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.000000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-09-28T23:33:04+08:00 ] 127.0.0.1 /SIS.JXNU-B/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0060s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = 2 ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0020s ]
+SQL: SELECT `savepath`,`savename`,fl.url,fl.name FROM edu_friend_link fl INNER JOIN edu_frame_file as f ON fl.img=f.id  WHERE fl.status = 1 AND fl.type = 1 ORDER BY fl.create_time desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_banner` [ RunTime:0.0080s ]
+SQL: SELECT b.id,b.index_show,f.savepath,f.savename FROM edu_banner b INNER JOIN edu_frame_file AS f ON b.img_title = f.id  WHERE `status` = 1 AND `index_show` <> 0 ORDER BY b.create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_category` WHERE `status` = 1 AND `switch` = 1 AND `nav_show` = 1 AND `language_id` = 2 ORDER BY rank desc LIMIT 5   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0070s ]
+SQL: SELECT d.id,d.content FROM edu_details d INNER JOIN edu_category AS c ON d.category_id = c.id  WHERE d.status = 1 AND c.language_id = 2 AND d.is_publish = 1 ORDER BY d.create_time desc  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '领导致辞' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 59 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0030s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '师生风采' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 18 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '教学动态' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 60 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '新闻动态' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 23 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0020s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '学生组织' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 28 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+SQL: SELECT `id` FROM `edu_category` WHERE `name` = '科研动态' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `edu_details` WHERE `status` = 1 AND `category_id` = 58 AND `language_id` = 2 ORDER BY create_time desc LIMIT 6   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 30 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.250014s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.251014s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.001000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-09-28T23:33:06+08:00 ] 127.0.0.1 /SIS.JXNU-B/index.php/Home/Article/detail/content_id/738/lan_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0020s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = '2' ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0020s ]
+SQL: UPDATE `edu_details` SET `hit`=hit+1 WHERE `id` = 738 [ RunTime:0.0680s ]
+SQL: SELECT d.id,d.hit,d.user_id,d.title,d.content,d.create_time,d.update_time,c.pid as c_pid,c.name as category_name,u.name AS user_name FROM edu_details d INNER JOIN edu_category AS c ON d.category_id=c.id LEFT JOIN edu_user AS u ON d.user_id=u.id  WHERE d.status = 1 AND d.is_publish = 1 AND d.id = '738' AND d.language_id = '2'  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `status` = 1 AND `switch` = 1 ORDER BY id asc  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `pid` = 1 AND `status` = 1 AND `switch` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.157009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.158009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.000000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-09-28T23:33:14+08:00 ] 127.0.0.1 /SIS.JXNU-B/index.php/Home/Article/detail/content_id/739/lan_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0070s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = '2' ORDER BY rank desc  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0060s ]
+SQL: UPDATE `edu_details` SET `hit`=hit+1 WHERE `id` = 739 [ RunTime:0.0510s ]
+SQL: SELECT d.id,d.hit,d.user_id,d.title,d.content,d.create_time,d.update_time,c.pid as c_pid,c.name as category_name,u.name AS user_name FROM edu_details d INNER JOIN edu_category AS c ON d.category_id=c.id LEFT JOIN edu_user AS u ON d.user_id=u.id  WHERE d.status = 1 AND d.is_publish = 1 AND d.id = '739' AND d.language_id = '2'  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `status` = 1 AND `switch` = 1 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `pid` = 1 AND `status` = 1 AND `switch` = 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.145008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.146008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.000000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-09-28T23:33:14+08:00 ] 127.0.0.1 /SIS.JXNU-B/index.php/Home/Article/ajax_get_category_id?content_id=739
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.003001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0070s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = 2 ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0070s ]
+SQL: SELECT `category_id` FROM `edu_details` WHERE `id` = 739 AND `status` = 1 AND `is_publish` = 1 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-28T23:33:18+08:00 ] 127.0.0.1 /SIS.JXNU-B/index.php/Home/Article/detail/content_id/736/lan_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0060s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = '2' ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0020s ]
+SQL: UPDATE `edu_details` SET `hit`=hit+1 WHERE `id` = 736 [ RunTime:0.1140s ]
+SQL: SELECT d.id,d.hit,d.user_id,d.title,d.content,d.create_time,d.update_time,c.pid as c_pid,c.name as category_name,u.name AS user_name FROM edu_details d INNER JOIN edu_category AS c ON d.category_id=c.id LEFT JOIN edu_user AS u ON d.user_id=u.id  WHERE d.status = 1 AND d.is_publish = 1 AND d.id = '736' AND d.language_id = '2'  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `status` = 1 AND `switch` = 1 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `pid` = 3 AND `status` = 1 AND `switch` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.148009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.149009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.000000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2016-09-28T23:33:19+08:00 ] 127.0.0.1 /SIS.JXNU-B/index.php/Home/Article/ajax_get_category_id?content_id=736
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.004000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0080s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = 2 ORDER BY rank desc  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0080s ]
+SQL: SELECT `category_id` FROM `edu_details` WHERE `id` = 736 AND `status` = 1 AND `is_publish` = 1 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-09-28T23:33:30+08:00 ] 127.0.0.1 /SIS.JXNU-B/index.php/Home/Article/detail/content_id/735/lan_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0070s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = '2' ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0060s ]
+SQL: UPDATE `edu_details` SET `hit`=hit+1 WHERE `id` = 735 [ RunTime:0.0630s ]
+SQL: SELECT d.id,d.hit,d.user_id,d.title,d.content,d.create_time,d.update_time,c.pid as c_pid,c.name as category_name,u.name AS user_name FROM edu_details d INNER JOIN edu_category AS c ON d.category_id=c.id LEFT JOIN edu_user AS u ON d.user_id=u.id  WHERE d.status = 1 AND d.is_publish = 1 AND d.id = '735' AND d.language_id = '2'  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `status` = 1 AND `switch` = 1 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `pid` = 1 AND `status` = 1 AND `switch` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.148008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.150008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.001000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-09-28T23:33:36+08:00 ] 127.0.0.1 /SIS.JXNU-B/index.php/Home/Article/detail/content_id/734/lan_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0070s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = '2' ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0070s ]
+SQL: UPDATE `edu_details` SET `hit`=hit+1 WHERE `id` = 734 [ RunTime:0.7520s ]
+SQL: SELECT d.id,d.hit,d.user_id,d.title,d.content,d.create_time,d.update_time,c.pid as c_pid,c.name as category_name,u.name AS user_name FROM edu_details d INNER JOIN edu_category AS c ON d.category_id=c.id LEFT JOIN edu_user AS u ON d.user_id=u.id  WHERE d.status = 1 AND d.is_publish = 1 AND d.id = '734' AND d.language_id = '2'  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `status` = 1 AND `switch` = 1 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `edu_category` WHERE `pid` = 5 AND `status` = 1 AND `switch` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant 日 - assumed '日' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 一 - assumed '一' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 二 - assumed '二' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 三 - assumed '三' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 四 - assumed '四' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 五 - assumed '五' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant 六 - assumed '六' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+NOTIC: [8] Use of undefined constant w - assumed 'w' F:\PHP\wamp64\www\SIS.JXNU-B\Runtime\Cache\Home\3c8a1a47a3534a7b1252c226abfc3928.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.144008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.144008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_end ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.001000s ]
+INFO: [ action_end ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-09-28T23:33:36+08:00 ] 127.0.0.1 /SIS.JXNU-B/index.php/Home/Article/ajax_get_category_id?content_id=734
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\PHP\wamp64\www\SIS.JXNU-B\HomyitCore\Library\Think\Session\Driver\Db.class.php 第 95 行.
+INFO: [ action_begin ] --START--
+INFO: Run Common\Behavior\HyLogBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `edu_friend_link` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `edu_friend_link` WHERE `status` = 1 AND `type` = 0 ORDER BY rank desc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_announce` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `edu_announce` WHERE `status` = 1 ORDER BY create_time desc LIMIT 5   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `edu_category` [ RunTime:0.0060s ]
+SQL: SELECT `pid`,`id`,`name`,`language_id` FROM `edu_category` WHERE `status` = 1 AND `nav_show` = 0 AND `switch` = 1 AND `language_id` = 2 ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `edu_language` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `edu_language` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `edu_details` [ RunTime:0.0050s ]
+SQL: SELECT `category_id` FROM `edu_details` WHERE `id` = 734 AND `status` = 1 AND `is_publish` = 1 LIMIT 1   [ RunTime:0.0010s ]
+

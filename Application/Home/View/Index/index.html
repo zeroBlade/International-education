@@ -1,0 +1,326 @@
+<extend name="Public:frameset"/>
+
+<block name="style">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/global/plugins/zm-rotation/zm-rotation.css"/>
+    <link href="__PUBLIC__/assets/pages/styles/index.css" rel="stylesheet" type="text/css"/>
+</block>
+
+<block name="page-body">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="news-player">
+                <div class="zm-rotation">
+                    <ul class="rotation-list">
+                        <volist name="picUrl" id="vo">
+                            <li>
+                                <a href="{:U('Article/detail',array('content_id'=>$vo['content_id'],'lan_id'=>$se_lan_id))}">{$vo['url']}</a>
+                            </li>
+                        </volist>
+                    </ul>
+                    <div class="rotation-title"></div>
+                    <a href="javascript:;" class="rotation-text"></a>
+                    <div class="rotation-focus"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="block">
+                <div class="block-title">
+                    <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
+                    学院动态
+                </div>
+                <div class="block-content">
+                    <ul>
+                        <empty name="news">
+                            <li>暂无动态</li>
+                            <else/>
+                            <volist name="news" id="vo">
+
+                                <li>
+                                    <div class="notice-list">
+                                        <img src="__PUBLIC__/assets/global/img/ico_17.jpg">
+                                        <a href="{:U('Article/detail',array('content_id'=>
+                                            $vo['id'],'lan_id'=>$lang_id))}">
+                                            <eq name="lang_id" value="2">
+                                                {$vo['title']|mb_substr=0,18,'UTF-8'}..
+                                                <else/>
+                                                {$vo['title']|mb_substr=0,30,'UTF-8'}...
+                                            </eq>
+                                        </a>
+                                        <span class="notice-time pull-right hidden-xs">{$vo['create_time']|date='m-d',###}</span>
+                                    </div>
+                                </li>
+
+                            </volist>
+                        </empty>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="block">
+                <div class="block-title">
+                    <span class="glyphicon glyphicon-tree-conifer" aria-hidden="true"></span>
+                    本科生教育
+                </div>
+                
+                <div class="block-content">
+                    <ul>
+                        <volist name="benke" id="bk">
+                            <li>
+                                <img src="__PUBLIC__/assets/global/img/ico_17.jpg">
+                                <a href="{:U('Article/detail',array('content_id'=>
+                                    $bk['id'],'lan_id'=>$lang_id))}">{$bk['title']|mb_substr=0,19,'UTF-8'}
+                                </a>
+                                <div class="time">{$bk['create_time']|date='m-d',###}</div>
+                            </li>
+                        </volist>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="block block-yjs">
+                <div class="block-title">
+                    <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                    研究生教育
+                </div>
+                <div class="block-content">
+                    <ul>
+                        <volist name="yanjiusheng" id="yjs">
+                            <li>
+                                <img src="__PUBLIC__/assets/global/img/ico_17.jpg">
+                                <a href="{:U('Article/detail',array('content_id'=>
+                                    $yjs['id'],'lan_id'=>$lang_id))}">{$yjs['title']|mb_substr=0,25,'UTF-8'}
+                                </a>
+                                <div class="time">{$yjs['create_time']|date='m-d',###}</div>
+                            </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+
+            <!--专题展示-->
+            <div class="block topic-block" style="display:none;">
+                <div class="box-title">
+                    <span class="glyphicon glyphicon-gift"></span>
+                    <eq name="lang_id" value="2">
+                        专题展示
+                        <else/>
+                        Topic
+                    </eq>
+                    <span class="more">
+                        <a href="javascript:;" class="pull-right hidden-xs hidden-sm back">
+                            <eq name="lang_id" value="2">
+                                返回
+                                <else/>
+                                Back
+                            </eq>
+                        </a>
+                    </span>
+                    <span class="more more-icon">
+                        <a href="" class="pull-right"> <i class="glyphicon glyphicon-share"></i>
+                        </a>
+                    </span>
+                </div>
+                <div class="block-content">
+                    <div class="box-center-content">
+                        <div class="topic-pic">
+                            <a target="_blank" href="{$topic['url']}" title="{$topic['name']}">
+                                <br>
+                                <img style="height: 0" src="__PUBLIC__/uploads/{$topic['path']}" alt=""/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="four-block">
+                <eq name="array_count" value="3">
+                    <div class="box-right">
+                        <eq name="lang_id" value="2">
+                            <ul class="box-nav">
+                                <volist name="subNav" id="vo">
+                                    <li data-id="{$vo['id']}">
+                                        <a href="{:U($vo['url'])}" >{$vo['name']}</a>
+                                    </li>
+                                </volist>
+                                <li class="topic">
+                                    <a href="javascript:;" >
+                                        <eq name="lang_id" value="2">
+                                            专题
+                                            <br>
+                                            展示
+                                            <else/>
+                                            Topic Show
+                                        </eq>
+                                    </a>
+                                </li>
+                            </ul>
+                            <else/>
+                            <ul class="box-nav2">
+                                <volist name="subNav" id="vo">
+                                    <li data-id="{$vo['id']}">
+                                        <a href="{:U($vo['url'])}" >{$vo['name']}</a>
+                                    </li>
+                                </volist>
+                                <li style="margin-left: 0px;" class="topic">
+                                    <a href="javascript:;" >Topic Show</a>
+                                </li>
+                            </ul>
+                        </eq>
+                    </div>
+                    <else/>
+
+                    <!--       <div class="box-right">
+                    <eq name="lang_id" value="2">
+                        <ul class="box-nav">
+                            <volist name="subNav" id="vo">
+                                <li data-id="{$vo['id']}">
+                                    <a href="{:U($vo['url'])}" >{$vo['name']}</a>
+                                </li>
+                            </volist>
+                            <li class="topic">
+                                <a href="javascript:;" >
+                                    <eq name="lang_id" value="2">
+                                        专题
+                                        <br>
+                                        展示
+                                        <else/>
+                                        Topic Show
+                                    </eq>
+                                </a>
+                            </li>
+                        </ul>
+                        <else/>
+                        <ul class="box-nav2">
+                            <volist name="subNav" id="vo">
+                                <li data-id="{$vo['id']}">
+                                    <a href="{:U($vo['url'])}" >{$vo['name']}</a>
+                                </li>
+                            </volist>
+                            <li style="margin-left: 0px;" class="topic">
+                                <a href="javascript:;" >Topic Show</a>
+                            </li>
+                        </ul>
+                    </eq>
+                </div>
+                -->
+                </eq>
+            </div>
+        </div>
+   
+        <div class="clear"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="block">
+                <div class="block-title">
+                    <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+                    学生工作
+                </div>
+                <div class="block-content">
+                    <ul>
+                        <volist name="xuesheng" id="xs">
+                            <li>
+                                <img src="__PUBLIC__/assets/global/img/ico_17.jpg">
+                                <a href="{:U('Article/detail',array('content_id'=>
+                                    $xs['id'],'lan_id'=>$lang_id))}">{$xs['title']|mb_substr=0,17,'UTF-8'}
+                                </a>
+                                <div class="time">{$xs['create_time']|date='m-d',###}</div>
+                            </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="block">
+                <div class="block-title">
+                    <span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>
+                    科学研究
+                </div>
+                <div class="block-content">
+                    <ul>
+                        <volist name="keyan" id="ky">
+                            <li>
+                                <img src="__PUBLIC__/assets/global/img/ico_17.jpg">
+                                <a href="{:U('Article/detail',array('content_id'=>
+                                    $ky['id'],'lan_id'=>$lang_id))}">{$ky['title']|mb_substr=0,27,'UTF-8'}
+                                </a>
+                                <div class="time">{$ky['create_time']|date='m-d',###}</div>
+                            </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="link">
+                <div class="link-img">
+                    <img src="__PUBLIC__/assets/global/img/link-img.png" alt=""></div>
+                <div class="link-text">
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="">办公系统</a>
+                            </td>
+                            <td>
+                                <a href="">教务在线</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="">图书馆</a>
+                            </td>
+                            <td>
+                                <a href="">社科处</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="">研究生院</a>
+                            </td>
+                            <td>
+                                <a href="">科技处</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="">招生就业</a>
+                            </td>
+                            <td>
+                                <a href="">学生工作网</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+
+<block name="script">
+    <script type="text/javascript" src="__PUBLIC__/assets/global/plugins/zm-rotation/jquery.zmrotation.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/assets/pages/scripts/index_home.js"></script>
+</block>
+
+<block name="script-init">
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".zm-rotation").zmRotation({height: 250});
+        }); 
+          $(document).ready(function(){
+                IndexShow.init();
+            });
+    </script>
+</block>
